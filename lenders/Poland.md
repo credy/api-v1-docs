@@ -455,28 +455,15 @@ For detailed instruction, see next page (Common attributes)</td>
 
 **Common attributes**
 
-Hash is calculated over an algorithm SHA1(all request/response data [except hash and timestamp] + client_api_key + timestamp)
 
 client_api_key is provided for each client on TC.
 
-*Example*:
-
-```json
-{
-    "client_status": "received",
-    "rejected_reason": null,
-    "lead_id": 123,
-    "timestamp": 123454567,
-    "hash": " 2027a04a46e9f41daa9625c754504c2c30a5d25e"
-}
-```
-
-
-Calculating the verification hash is following.
-
-sha1("client_statusreceivedreject_reasonlead_id123DBLS6jBNMd9yLZj21234567");
+Hash is calculated over an algorithm SHA1(all request/response data [except hash and timestamp] + client_api_key + timestamp)
 
 Algorithm: sha1(fieldvalue + api key + timestamp);
+
+Example: sha1("client_statusreceivedreject_reasonlead_id123DBLS6jBNMd9yLZj21234567");
+
 
 All boolean values in fieldvalue part must be represented as string (‘true’ or ‘false’).
 
@@ -527,6 +514,17 @@ invalid_ip - when endpoint url is blocked for TC</td>
   </tr>
 </table>
 
+
+Example:
+```json
+{
+    "client_status": "received",
+    "rejected_reason": null,
+    "lead_id": 123,
+    "timestamp": 123454567,
+    "hash": " 2027a04a46e9f41daa9625c754504c2c30a5d25e"
+}
+```
 
 # Versions
 
