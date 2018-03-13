@@ -400,6 +400,7 @@ WIDOW</td>
   <tr>
     <td>password</td>
     <td>String</td>
+    <td>Required
 
 Randomly generated string</td>
   </tr>
