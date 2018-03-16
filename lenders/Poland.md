@@ -395,9 +395,7 @@ WIDOW</td>
   <tr>
     <td>dependant_count</td>
     <td>Integer</td>
-    <td>Required
-
-Amount of dependant persons</td>
+    <td>Amount of dependant persons</td>
   </tr>
   <tr>
     <td>password</td>
